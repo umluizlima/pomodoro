@@ -44,6 +44,7 @@ const App = () => {
     }
     if (secondsRemaining <= 0) {
       setIsTimerRunning(false);
+      alert('Done!');
     }
     const timer = setTimeout(() => {
       setSecondsRemaining(secondsRemaining - 1);
@@ -66,7 +67,7 @@ const App = () => {
           onClick={switchTurn}
           disabled={isTimerRunning}
         >
-          switch
+          next
         </button>
         <div className="turn">{turn.label}</div>
         <div className="time">{formatTime(secondsRemaining)}</div>
